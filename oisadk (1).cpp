@@ -232,7 +232,7 @@ int main()
         cin >> x;
         switch (x)
         {
-        case '1':
+        case '1'://Add new branch
             cout << "Enter Branch's ID : ";
             cin >> id;
             cout << "Enter Branch's Name : ";
@@ -241,15 +241,15 @@ int main()
             cin >> manager;
             InsertB(id, name, manager);
             break;
-        case '2':
+        case '2': //Display Branch
             display();
             break;
-        case '3':
+        case '3'://Search for Branch by ID
             cout << "Enter Branch's ID : ";
             cin >> id;
             search(id);
             break;
-        case '4':
+        case '4'://Add new Holder
             cout << "Enter Holder's ID : ";
             cin >> id;
             cout << "Enter Holder's Name : ";
@@ -260,20 +260,20 @@ int main()
             cin >> balance;
             insertBh(id, name, address, balance);
             break;
-        case '5':
+        case '5'://Remove a Holder
             cout << "Enter Holder's ID : ";
             cin >> id;
             deleteitemh(id);
             break;
-        case '6':
+        case '6'://Display Holder data
             displayh();
             break;
-        case '7':
+        case '7'://Search for Holder by Name
             cout << "Enter Holder's Name : ";
             cin >> name;
             searchhN(name);
             break;
-        case '8':
+        case '8'://Update Holder Information
             cout << "Enter Holder's ID : ";
             cin >> id;
             cout << "Enter Holder's Name : ";
