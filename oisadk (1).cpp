@@ -36,8 +36,7 @@ void display()
         branch *temp = head;
         while (temp != NULL)
         {
-            cout << temp->ID << "\n " << temp->name << " \n"
-                 << temp->manager << "\n";
+            cout << temp->ID << " " << temp->name << " "<< temp->manager << "\n";
             temp = temp->next;
         }
     }
@@ -54,7 +53,7 @@ bool search(string id)
             {
                 if (temp->ID == id)
                 {
-                    cout << temp->ID << " " << temp->name << " " << temp->manager << "\n";
+                    cout << temp->ID << " " << temp->name << " " << temp->manager << " \n";
                     return true;
                 }
                 temp = temp->next;
@@ -232,7 +231,6 @@ int main()
         {
         case '1':
             cout << "Enter Branch's ID : ";
-            cin >> id;
             getline(cin, id);
             cout << "Enter Branch's Name : ";
             getline(cin, name);
