@@ -5,7 +5,7 @@ struct holder
     string ID;
     string name;
     string adress;
-    double balance;
+    int balance;
     holder *next;
 };
 struct branch
@@ -64,7 +64,7 @@ bool search(string id)
     }
     return false;
 }
-void insertBh(string idd, string namee, string adresss, double balancee = 0.0)
+void insertBh(string idd, string namee, string adresss, int balancee = 0.0)
 {
     holder *temp = new holder;
     temp->ID = idd;
@@ -127,7 +127,7 @@ bool searchhI(string idd)
     }
     return false;
 }
-void updateh(string idd, string namee, string adresss, double balancee)
+void updateh(string idd, string namee, string adresss, int balancee)
 {
     if (head2 == NULL)
         cout << "List is Empty\n";
@@ -223,7 +223,7 @@ int main()
 {
     rr();
     string id, manager, name, address;
-    double balance = 0.0;
+    int balance = 0;
     while (true)
     {
         abdo();
