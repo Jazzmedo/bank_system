@@ -36,7 +36,7 @@ void display()
         branch *temp = head;
         while (temp != NULL)
         {
-            cout << temp->ID << " " << temp->name << " "<< temp->manager << "\n";
+            cout << temp->ID << " " << temp->name << " " << temp->manager << "\n";
             temp = temp->next;
         }
     }
@@ -62,6 +62,7 @@ bool search(string id)
         cout << "Handler ID not found\n";
         return false;
     }
+    return false;
 }
 void insertBh(string idd, string namee, string adresss, double balancee = 0.0)
 {
@@ -106,6 +107,7 @@ bool searchhN(string namee)
         cout << "Handler Name not found\n";
         return false;
     }
+    return false;
 }
 bool searchhI(string idd)
 {
@@ -123,6 +125,7 @@ bool searchhI(string idd)
         cout << "Handler ID not found\n";
         return false;
     }
+    return false;
 }
 void updateh(string idd, string namee, string adresss, double balancee)
 {
@@ -231,11 +234,11 @@ int main()
         {
         case '1':
             cout << "Enter Branch's ID : ";
-            getline(cin, id);
+            cin >> id;
             cout << "Enter Branch's Name : ";
-            getline(cin, name);
+            cin >> name;
             cout << "Enter Branch's Manager : ";
-            getline(cin, manager);
+            cin >> manager;
             InsertB(id, name, manager);
             break;
         case '2':
@@ -243,23 +246,23 @@ int main()
             break;
         case '3':
             cout << "Enter Branch's ID : ";
-            getline(cin, id);
+            cin >> id;
             search(id);
             break;
         case '4':
             cout << "Enter Holder's ID : ";
-            getline(cin, id);
+            cin >> id;
             cout << "Enter Holder's Name : ";
-            getline(cin, name);
+            cin >> name;
             cout << "Enter Holder's Address : ";
-            getline(cin, address);
+            cin >> address;
             cout << "Enter Holder's Balance : ";
             cin >> balance;
             insertBh(id, name, address, balance);
             break;
         case '5':
             cout << "Enter Holder's ID : ";
-            getline(cin, id);
+            cin >> id;
             deleteitemh(id);
             break;
         case '6':
@@ -267,16 +270,16 @@ int main()
             break;
         case '7':
             cout << "Enter Holder's Name : ";
-            getline(cin, name);
+            cin >> name;
             searchhN(name);
             break;
         case '8':
             cout << "Enter Holder's ID : ";
-            getline(cin, id);
+            cin >> id;
             cout << "Enter Holder's Name : ";
-            getline(cin, name);
+            cin >> name;
             cout << "Enter Holder's Address : ";
-            getline(cin, address);
+            cin >> address;
             cout << "Enter Holder's Balance : ";
             cin >> balance;
             updateh(id, name, address, balance);
