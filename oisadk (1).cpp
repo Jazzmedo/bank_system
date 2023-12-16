@@ -284,7 +284,7 @@ int main()
             cin >> balance;
             updateh(id, name, address, balance);
             break;
-        case 'x':
+        case 'x'://exit
             return 0;
             break;
         default:
