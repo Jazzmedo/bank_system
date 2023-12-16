@@ -64,7 +64,7 @@ bool search(string id)
     }
     return false;
 }
-void insertBh(string idd, string namee, string adresss, int balancee = 0.0)
+void insertBh(string idd, string namee, string adresss, int balancee = 0)
 {
     holder *temp = new holder;
     temp->ID = idd;
@@ -159,7 +159,6 @@ void deleteitemh(string idd)
     else
     {
         holder *temp1 = head2;
-        holder *temp2 = NULL;
         if (head2->ID == idd)
         {
             head2 = head2->next;
@@ -167,6 +166,7 @@ void deleteitemh(string idd)
         }
         else
         {
+        holder *temp2 = NULL;
             while (temp1->ID != idd && temp1 != NULL)
             {
                 temp2 = temp1;
