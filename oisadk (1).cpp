@@ -109,7 +109,7 @@ bool searchhN(string namee)
     }
     return false;
 }
-bool searchhI(string idd)
+bool searchhI(string idd)// for delete and update
 {
     if (head2 == NULL)
         cout << "List is Empty\n";
@@ -258,7 +258,7 @@ int main()
             cin >> address;
             cout << "Enter Holder's Balance : ";
             cin >> balance;
-            insertBh(id, name, address, balance);
+            insertBh(id, name, address, balance);                                                                            
             break;
         case '5'://Remove a Holder
             cout << "Enter Holder's ID : ";
